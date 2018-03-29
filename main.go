@@ -9,8 +9,8 @@ import (
 func main() {
 
 	app := cli.NewApp()
-	app.Name = "go-timer"
-	app.Version = "1.0.0"
+	app.Name = Name
+	app.Version = Version
 	app.Author = "jiro4989"
 	app.Email = ""
 	app.Usage = "Timer with Golang on CLI"
