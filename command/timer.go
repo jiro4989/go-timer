@@ -2,17 +2,12 @@ package command
 
 import (
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/codegangsta/cli"
 	"github.com/fatih/color"
 	jtime "github.com/jiro4989/go-timer/time"
 )
-
-func init() {
-	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
-}
 
 func CmdTimer(c *cli.Context) {
 	s := c.Int("seconds") // 秒
@@ -25,8 +20,8 @@ func CmdTimer(c *cli.Context) {
 
 	n := time.Now()
 	endTime := n.Add(time.Duration(sec) * time.Second)
-	fmt.Println("    Start Time:", n.Format("03:04:05"))
-	fmt.Println("      End Time:", endTime.Format("03:04:05"))
+	fmt.Println("    Start Time:", n.Format("15:04:05"))
+	fmt.Println("      End Time:", endTime.Format("15:04:05"))
 
 	green := color.New(color.FgGreen)
 	yellow := color.New(color.FgYellow)

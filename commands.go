@@ -43,7 +43,13 @@ var Commands = []cli.Command{
 		Name:   "alerm",
 		Usage:  "Alertm",
 		Action: command.CmdAlerm,
-		Flags:  []cli.Flag{},
+		Flags: []cli.Flag{
+			cli.StringFlag{
+				Name:  "time,t",
+				Value: "",
+				Usage: "",
+			},
+		},
 	},
 }
 
